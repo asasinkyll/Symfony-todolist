@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <br>
+    <a href="/" class="btn btn-primary"> Back to todos</a>
+    <hr>
+    <h2>{{ todo.naem }}</h2>
+    <ul class="list-group">
+        <li class="list-group-item"> Category: {{ todo.category }}</li>
+        <li class="list-group-item">Priority: {{ todo.priority }}</li>
+        <li class="list-group-item">Due Date: <strong>{{ todo.dueDate|date }}</strong></li>
+    </ul>
+    <p>
+        {{ todo.description }}
+    </p>
+
+
+{%  endblock %}
